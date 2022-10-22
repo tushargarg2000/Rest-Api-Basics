@@ -1,6 +1,7 @@
 package com.example.RestApiController;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
@@ -11,6 +12,17 @@ import java.util.Map;
 
 @RestController //Annotation --> In this class I will the API's
 public class MyControllers {
+
+    @Autowired
+    User myControllerObj;
+
+    @GetMapping("/myController")
+    public User function(){
+
+
+        System.out.println("The address ob obj in myController"+myControllerObj);
+        return myControllerObj;
+    }
 
 
     //DB Purpose

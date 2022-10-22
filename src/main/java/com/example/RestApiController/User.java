@@ -1,5 +1,9 @@
 package com.example.RestApiController;
 
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class User {
 
     private int id;
@@ -7,6 +11,13 @@ public class User {
     private String country;
     private int age;
 
+    public User(){
+        //Spring creates an object using the default constructor
+        //only when an @Component is wrriten on the class
+        //directly or indirectly
+        System.out.println("Default Constructor is called whilte" +
+                "creating the user object");
+    }
 
     public User(int id, String name, String country, int age) {
         this.id = id;
