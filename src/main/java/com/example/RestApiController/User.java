@@ -1,9 +1,11 @@
 package com.example.RestApiController;
 
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+
+
 public class User {
 
     private int id;
